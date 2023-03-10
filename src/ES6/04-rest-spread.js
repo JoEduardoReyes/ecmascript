@@ -14,3 +14,24 @@ let user = {
 let { username, age } = user;
 
 console.log(username, age);
+
+// spread operator
+
+let person = {
+	name: "Eduardo",
+	age: 24,
+};
+let country = "GT";
+
+let data = { ...person, country };
+console.log(data);
+
+// rest operator
+
+function sum(num, ...values) {
+	console.log(values);
+	console.log(num + values[0]);
+	return num + values[0];
+}
+
+sum(1, 1, 2, 3, 4, 5);
